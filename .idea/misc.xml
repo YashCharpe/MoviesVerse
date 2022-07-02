@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/MYPC/AndroidStudioProjects/MoviesVerse/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.206" />
+        <entry key="..\:/Users/MYPC/AndroidStudioProjects/MoviesVerse/app/src/main/res/drawable/bottomroundedimage.xml" value="0.166" />
         <entry key="..\:/Users/MYPC/AndroidStudioProjects/MoviesVerse/app/src/main/res/drawable/ic_launcher_background.xml" value="0.206" />
         <entry key="..\:/Users/MYPC/AndroidStudioProjects/MoviesVerse/app/src/main/res/layout/activity_genre_wise_movies.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/MYPC/AndroidStudioProjects/MoviesVerse/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/MYPC/AndroidStudioProjects/MoviesVerse/app/src/main/res/layout/activity_main_dashboard.xml" value="0.1" />
+        <entry key="..\:/Users/MYPC/AndroidStudioProjects/MoviesVerse/app/src/main/res/layout/activity_movie_details.xml" value="0.264" />
         <entry key="..\:/Users/MYPC/AndroidStudioProjects/MoviesVerse/app/src/main/res/layout/movie_card.xml" value="0.2" />
       </map>
     </option>

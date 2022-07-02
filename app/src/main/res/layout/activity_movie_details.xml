@@ -1,9 +1,419 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MovieDetails">
+    tools:context=".MovieDetails"
+    android:orientation="vertical"
+    android:background="#141a32">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/backdropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/imitationgamebackdrop"
+        app:shapeAppearanceOverlay="@style/roundImageView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Imitation Game"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp">
+
+            <ImageView
+                android:id="@+id/heartShapeIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/heartshape"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="94%"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UA | Nov 22, 2018"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12,789 votes"
+            android:textColor="@color/white"
+            android:layout_marginLeft="170dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1hr 43min | Drama, Fantasy"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English"
+            android:textColor="@color/white"
+            android:layout_marginLeft="150dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Synopsis"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/movieDescriptionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope."
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:textStyle="italic"
+                    android:justificationMode="inter_word"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cast"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardElevation="10dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardBackgroundColor="#00000000">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@mipmap/profile1"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="10dp"
+                                    app:shapeAppearanceOverlay="@style/castImageView"/>
+
+                                <TextView
+                                    android:id="@+id/castName"
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Morgan Freeman"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"
+                                    android:gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Director"
+                                    android:textColor="@color/white"/>
+
+
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardElevation="10dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardBackgroundColor="#00000000">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@mipmap/profile2"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="10dp"
+                                    app:shapeAppearanceOverlay="@style/castImageView"/>
+
+                                <TextView
+                                    android:id="@+id/castName2"
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jennifer Lawrence"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"
+                                    android:gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Actor"
+                                    android:textColor="@color/white"/>
+
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardElevation="10dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardBackgroundColor="#00000000">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@mipmap/profile3"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="10dp"
+                                    app:shapeAppearanceOverlay="@style/castImageView"/>
+
+                                <TextView
+                                    android:id="@+id/castName3"
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Benedict Cumberbatch"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"
+                                    android:gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Actor"
+                                    android:textColor="@color/white"/>
+
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardElevation="10dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardBackgroundColor="#00000000">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@mipmap/profile4"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="10dp"
+                                    app:shapeAppearanceOverlay="@style/castImageView"/>
+
+                                <TextView
+                                    android:id="@+id/castName4"
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Morgan Freeman"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"
+                                    android:gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Producer"
+                                    android:textColor="@color/white"/>
+
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardElevation="10dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardBackgroundColor="#00000000">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@mipmap/profile5"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="10dp"
+                                    app:shapeAppearanceOverlay="@style/castImageView"/>
+
+                                <TextView
+                                    android:id="@+id/castName5"
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Leonardo DiCaprio"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"
+                                    android:gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Actor"
+                                    android:textColor="@color/white"/>
+
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

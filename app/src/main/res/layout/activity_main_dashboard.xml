@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainDashboard"
-    android:background="@color/white">
+    android:background="#141a32">
 
 
 
@@ -39,6 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="MoviesVerse"
+                    android:textColor="@color/white"
                     android:layout_toRightOf="@id/logo"
                     android:layout_centerVertical="true"
                     android:textStyle="bold"
@@ -52,6 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Categories"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:padding="10dp"
@@ -71,6 +73,7 @@
                         android:layout_height="wrap_content"
                         android:padding="25dp"
                         android:text="Top Rated"
+                        android:textColor="@color/white"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
@@ -82,7 +85,7 @@
                         android:background="#00000000"
                         android:padding="20dp"
                         android:text="Expand All"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white"/>
 
                 </RelativeLayout>
 
@@ -118,6 +121,7 @@
                         android:layout_alignParentRight="true"
                         android:padding="25dp"
                         android:text="Popular"
+                        android:textColor="@color/white"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
@@ -125,7 +129,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Expand All"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:background="#00000000"
                         android:padding="20dp"
                         android:layout_alignParentBottom="true"
@@ -150,6 +154,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Top Rated"
+                        android:textColor="@color/white"
                         android:textSize="30sp"
                         android:textStyle="bold"
                         android:padding="25dp"/>
@@ -158,7 +163,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Expand All"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:background="#00000000"
                         android:padding="20dp"
                         android:layout_alignParentBottom="true"/>
@@ -194,6 +199,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Popular"
+                        android:textColor="@color/white"
                         android:textSize="30sp"
                         android:textStyle="bold"
                         android:padding="25dp"
@@ -203,7 +209,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Expand All"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:background="#00000000"
                         android:padding="20dp"
                         android:layout_alignParentBottom="true"
