@@ -27,7 +27,7 @@
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:text="The Imitation Game"
             android:textColor="@color/white"
@@ -47,6 +47,7 @@
                 android:layout_height="30dp"
                 android:src="@drawable/heartshape"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"/>
 
             <TextView
@@ -56,6 +57,7 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"/>
 
         </LinearLayout>
@@ -68,12 +70,14 @@
         android:layout_marginLeft="20dp">
         
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/releaseDateTv"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="UA | Nov 22, 2018"
             android:textColor="@color/white" />
 
         <TextView
+            android:id="@+id/vote_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="12,789 votes"
@@ -90,6 +94,7 @@
         android:layout_marginTop="10dp">
 
         <TextView
+            android:id="@+id/length_genre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1hr 43min | Drama, Fantasy"
@@ -179,6 +184,7 @@
                                 android:gravity="center_horizontal">
 
                                 <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/castImg1"
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
                                     android:src="@mipmap/profile1"
@@ -189,7 +195,7 @@
                                     app:shapeAppearanceOverlay="@style/castImageView"/>
 
                                 <TextView
-                                    android:id="@+id/castName"
+                                    android:id="@+id/castName1"
                                     android:layout_width="130dp"
                                     android:layout_height="wrap_content"
                                     android:text="Morgan Freeman"
@@ -200,6 +206,7 @@
                                     android:layout_marginTop="10dp"/>
 
                                 <TextView
+                                    android:id="@+id/castWork1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Director"
@@ -227,6 +234,7 @@
                                 android:gravity="center_horizontal">
 
                                 <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/castImg2"
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
                                     android:src="@mipmap/profile2"
@@ -248,6 +256,7 @@
                                     android:layout_marginTop="10dp"/>
 
                                 <TextView
+                                    android:id="@+id/castWork2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Actor"
@@ -274,6 +283,7 @@
                                 android:gravity="center_horizontal">
 
                                 <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/castImg3"
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
                                     android:src="@mipmap/profile3"
@@ -295,6 +305,7 @@
                                     android:layout_marginTop="10dp"/>
 
                                 <TextView
+                                    android:id="@+id/castWork3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Actor"
@@ -321,6 +332,7 @@
                                 android:gravity="center_horizontal">
 
                                 <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/castImg4"
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
                                     android:src="@mipmap/profile4"
@@ -342,6 +354,7 @@
                                     android:layout_marginTop="10dp"/>
 
                                 <TextView
+                                    android:id="@+id/castWork4"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Producer"
@@ -368,6 +381,7 @@
                                 android:gravity="center_horizontal">
 
                                 <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/castImg5"
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
                                     android:src="@mipmap/profile5"
@@ -389,6 +403,7 @@
                                     android:layout_marginTop="10dp"/>
 
                                 <TextView
+                                    android:id="@+id/castWork5"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Actor"

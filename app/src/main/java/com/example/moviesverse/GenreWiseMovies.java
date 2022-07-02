@@ -109,7 +109,7 @@ public class GenreWiseMovies extends AppCompatActivity implements RecyclerMovieC
 
     @Override
     public void onNoteClick(int position) {
-        Toast.makeText(getApplicationContext(), arrMovie.get(position).title+" "+arrMovie.get(position).id,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), arrMovie.get(position).title+" "+arrMovie.get(position).id,Toast.LENGTH_SHORT).show();
         Bundle bundle = new Bundle();
         bundle.putString("movieId",Integer.toString(arrMovie.get(position).id));
         Intent intent = new Intent(getApplicationContext(),MovieDetails.class);
