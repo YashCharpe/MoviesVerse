@@ -30,7 +30,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class GenreWiseMovies extends AppCompatActivity {
+public class GenreWiseMovies extends AppCompatActivity implements RecyclerMovieCardAdapter.OnNoteListner {
 
     private top_rated_results topRatedResults;
     private RecyclerView recyclerViewList;
@@ -50,7 +50,7 @@ public class GenreWiseMovies extends AppCompatActivity {
             String value = bundle.getString("value");
 
             if(value.equals("topRated")){
-                Toast.makeText(getApplicationContext(),value,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
                 Retrofit retrofit = new Retrofit.Builder()
                         .baseUrl("https://api.themoviedb.org/3/movie/")
                         .addConverterFactory(GsonConverterFactory.create())
@@ -70,7 +70,7 @@ public class GenreWiseMovies extends AppCompatActivity {
                         }
 
                         topRatedResults = response.body();
-                        Toast.makeText(getApplicationContext(),"msg: "+topRatedResults.getResults().get(0).getTitle(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"msg: "+topRatedResults.getResults().get(0).getTitle(),Toast.LENGTH_SHORT).show();
                         String a = "";
                         for(int i=0;i<topRatedResults.getResults().size();i++){
                             a+=topRatedResults.getResults().get(i).getTitle()+"\n";
@@ -83,34 +83,15 @@ public class GenreWiseMovies extends AppCompatActivity {
 
                             String url = "https://image.tmdb.org/t/p/w500/" + topRatedResults.getResults().get(i).getPoster_path();
 
-
-
                             arrMovie.add(new MovieCardModel(url,
                                         topRatedResults.getResults().get(i).getTitle(),
                                         Float. toString(topRatedResults.getResults().get(i).getVote_average()),
                                         topRatedResults.getResults().get(i).getRelease_date(),
-                                        Float. toString(topRatedResults.getResults().get(i).getPopularity())));
-
-//                            try {
-//                                URL url1 = new URL(url);
-//                                Bitmap image = BitmapFactory.decodeStream(url1.openConnection().getInputStream());
-//                                Drawable d = new BitmapDrawable(getResources(), image);
-//
-//                                arrMovie.add(new MovieCardModel(d,
-//                                        topRatedResults.getResults().get(i).getTitle(),
-//                                        Float. toString(topRatedResults.getResults().get(i).getVote_average()),
-//                                        topRatedResults.getResults().get(i).getRelease_date(),
-//                                        Float. toString(topRatedResults.getResults().get(i).getPopularity())));
-//
-//                            } catch (MalformedURLException e) {
-//                                e.printStackTrace();
-//                            } catch (IOException e) {
-//                                e.printStackTrace();
-//                            }
-//
+                                        Float. toString(topRatedResults.getResults().get(i).getPopularity()),
+                                        topRatedResults.getResults().get(i).getId()));
                         }
 
-                        RecyclerMovieCardAdapter adapter = new RecyclerMovieCardAdapter(getApplicationContext(),arrMovie);
+                        RecyclerMovieCardAdapter adapter = new RecyclerMovieCardAdapter(getApplicationContext(),arrMovie, (RecyclerMovieCardAdapter.OnNoteListner) recyclerViewList.getContext());
                         recyclerViewList.setAdapter(adapter);
 
                     }
@@ -124,19 +105,15 @@ public class GenreWiseMovies extends AppCompatActivity {
             }
         }
 
-
-
     }
 
-    Bitmap drawable_from_url(String url) throws java.net.MalformedURLException, java.io.IOException {
-
-        HttpURLConnection connection = (HttpURLConnection)new URL(url) .openConnection();
-        connection.setRequestProperty("User-agent","Mozilla/4.0");
-
-        connection.connect();
-        InputStream input = connection.getInputStream();
-
-        return BitmapFactory.decodeStream(input);
+    @Override
+    public void onNoteClick(int position) {
+        Toast.makeText(getApplicationContext(), arrMovie.get(position).title+" "+arrMovie.get(position).id,Toast.LENGTH_SHORT).show();
+        Bundle bundle = new Bundle();
+        bundle.putString("movieId",Integer.toString(arrMovie.get(position).id));
+        Intent intent = new Intent(getApplicationContext(),MovieDetails.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
-
 }

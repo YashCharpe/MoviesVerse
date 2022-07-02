@@ -27,9 +27,12 @@ public class RecyclerMovieCardAdapter extends RecyclerView.Adapter<RecyclerMovie
     Context context;
     ArrayList<MovieCardModel> arrMovies;
 
-    RecyclerMovieCardAdapter(Context context, ArrayList<MovieCardModel> arrMovies){
+    private OnNoteListner mOnNoteListener;
+
+    RecyclerMovieCardAdapter(Context context, ArrayList<MovieCardModel> arrMovies,OnNoteListner mOnNoteListener){
         this.context = context;
         this.arrMovies = arrMovies;
+        this.mOnNoteListener = mOnNoteListener;
     }
 
     @NonNull
@@ -37,7 +40,7 @@ public class RecyclerMovieCardAdapter extends RecyclerView.Adapter<RecyclerMovie
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View v = LayoutInflater.from(context).inflate(R.layout.movie_card,parent,false);
-        ViewHolder viewHolder = new ViewHolder(v);
+        ViewHolder viewHolder = new ViewHolder(v,mOnNoteListener);
         return viewHolder;
     }
 
@@ -57,10 +60,13 @@ public class RecyclerMovieCardAdapter extends RecyclerView.Adapter<RecyclerMovie
         return arrMovies.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView posterImage;
         TextView title,ratingTv,releaseDateTv,popularityTv;
-        public ViewHolder(@NonNull View itemView){
+
+        OnNoteListner onNoteListner;
+
+        public ViewHolder(@NonNull View itemView,OnNoteListner onNoteListner){
             super(itemView);
 
             posterImage = itemView.findViewById(R.id.posterImage);
@@ -69,8 +75,20 @@ public class RecyclerMovieCardAdapter extends RecyclerView.Adapter<RecyclerMovie
             releaseDateTv = itemView.findViewById(R.id.releaseDateTv);
             popularityTv = itemView.findViewById(R.id.popularityTv);
 
+            this.onNoteListner = onNoteListner;
+
+            itemView.setOnClickListener(this);
+
+        }
+
+        @Override
+        public void onClick(View v) {
+            onNoteListner.onNoteClick(getAdapterPosition());
         }
     }
 
+    public interface OnNoteListner{
+        void onNoteClick(int position);
+    }
 
 }
