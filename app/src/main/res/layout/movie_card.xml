@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#141a32">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#141a32">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="20dp"
+                android:background="#1e2747">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="The Imitation Game"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layoutRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/title">
+
+                    <ImageView
+                        android:id="@+id/starIv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="140dp"
+                        android:src="@drawable/star"/>
+
+                    <TextView
+                        android:id="@+id/ratingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/starIv"
+                        android:text="9.7 IMDB"
+                        android:paddingLeft="10dp"
+                        android:textSize="18sp"
+                        android:textColor="#febe01"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/releaseDateTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layoutRating"
+                    android:layout_marginLeft="140dp"
+                    android:paddingTop="10dp"
+                    android:text="Release Date: 1994-09-23"
+                    android:textColor="#3f547a" />
+
+                <TextView
+                    android:id="@+id/popularityTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/releaseDateTv"
+                    android:layout_marginLeft="140dp"
+                    android:text="Popularity: 66.166"
+                    android:textColor="#3f547a"
+                    android:paddingTop="5dp"
+                    />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/posterImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/imitationgame"
+                android:layout_marginLeft="20dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
